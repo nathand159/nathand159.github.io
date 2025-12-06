@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CONSCIOUS REDIRECT</title>
+		<link rel="icon" type="image/png" href="icon.png">
+		
+		<style>
+			a {
+				position:relative;
+				top:20px;			
+			}
+			
+			body {
+				text-align:center;
+			}
+		
+			#fortnite {
+				margin-top:40vh;
+			}
+		
+			#quote {
+				font-size:30px;
+			}
+
+			p {
+			  transition: font-family 0.5s;
+			}
+
+			.font1 { font-family: "Arial", sans-serif; }
+			.font2 { font-family: "Georgia", serif; }
+			.font3 { font-family: "Courier New", monospace; }
+			.font4 { font-family: "Tahoma", sans-serif; }
+			.font5 { font-family: "Verdana", sans-serif; }
+			.font6 { font-family: "Trebuchet MS", sans-serif; }
+			.font7 { font-family: "Times New Roman", serif; }
+			.font8 { font-family: "Lucida Console", monospace; }
+			.font9 { font-family: "Garamond", serif; }
+			.font10 { font-family: "Comic Sans MS", cursive; }
+		</style>
+	</head>
+	<body>
+	  <div>
+	   	  <p id="fortnite"> cheesy quote :) </p>
+		  <p id="quote"></p>
+	  </div>
+	<script>
+		const quotes = [
+		"Believe you can and you're halfway there",
+		"It always seems impossible until it’s done",
+		"Do something today that your future self will thank you for",
+		"Dream big and dare to fail",
+		"Success is not final; failure is not fatal: it is the courage to continue that counts",
+		"You don’t have to be great to start, but you have to start to be great",
+		"Small progress is still progress",
+		"The best time to start was yesterday. The next best time is now",
+		"Don’t limit your challenges, challenge your limits",
+		"Discipline is choosing what you want most over what you want now",
+		"Your only limit is you",
+		"Little by little, a little becomes a lot",
+		"Motivation gets you started. Habit keeps you going",
+		"You miss 100% of the shots you don’t take",
+		"If it matters to you, you’ll find a way",
+		"Success is the sum of small efforts repeated day in and day out",
+		"Comfort zones are where dreams go to die",
+		"The secret of getting ahead is getting started",
+		"The harder you work for something, the greater you’ll feel when you achieve it",
+		"Consistency is more important than intensity",
+		"You are stronger than you think",
+		"Don’t stop until you’re proud",
+		"Stop waiting for permission",
+		"The only bad workout is the one that didn't happen",
+		"Be the energy you want to attract",
+		"Fall seven times, stand up eight",
+		"Focus on progress, not perfection",
+		"You can have excuses or results, not both",
+		"Your future depends on what you do today",
+		"Success doesn’t come from what you do occasionally, but from what you do consistently",
+		"One day or day one, you decide",
+		"The way to get started is to quit talking and begin doing",
+		"The journey of a thousand miles begins with a single step",
+		"You didn’t come this far to only come this far",
+		"The struggle you’re in today is developing the strength you need for tomorrow",
+		"Your mindset determines your success",
+		"Great things never come from comfort zones",
+		"Work hard in silence, let success make the noise",
+		"Every accomplishment starts with the decision to try",
+		"Doubt kills more dreams than failure ever will",
+		"You are capable of amazing things",
+		"Go the extra mile, it’s never crowded",
+		"Act like the person you want to become",
+		"Do it for the future you",
+		"Begin anywhere",
+		"Push yourself because no one else is going to do it for you",
+		"Wake up with determination, go to bed with satisfaction",
+		"One step at a time",
+		"Make it happen",
+		"Focus on being productive, not busy",
+		"The best view comes after the hardest climb",
+		"Never stop learning",
+		"The comeback is always stronger than the setback",
+		"You owe it to yourself to become everything you’ve ever dreamed of being",
+		"Hard work beats talent when talent doesn’t work hard",
+		"Success requires sacrifice",
+		"Stay focused and never give up",
+		"When you feel like quitting, remember why you started",
+		"Done is better than perfect",
+		"Good things come to those who work for them",
+		"You didn’t lose, you learned",
+		"Don’t watch the clock; do what it does. Keep going",
+		"Be patient, great things take time",
+		"What you do today can improve all your tomorrows",
+		"You become what you repeatedly do",
+		"Don’t fear failure, fear regret",
+		"Today is another chance to get better",
+		"You are what you do, not what you say you’ll do",
+		"Your dreams don’t work unless you do",
+		"Everything you’ve ever wanted is on the other side of fear",
+		"Start before you’re ready",
+		"Nothing changes if nothing changes",
+		"Be proud of how far you’ve come and have faith in how far you can go",
+		"Focus. Commit. Execute",
+		"Believe in the process",
+		"Be relentless",
+		"Your habits shape your future",
+		"Excuses don’t build empires",
+		"Strength grows in moments where you think you can’t go on but keep going anyway",
+		"Be someone your future self will thank",
+		"The only way to fail is to stop trying",
+		"Progress requires patience and persistence",
+		"Effort is between you and you",
+		"There is no elevator to success, you have to take the stairs",
+		"You are one decision away from a completely different life",
+		"Make your goals stronger than your distractions",
+		"Direction is more important than speed",
+		"The best project you’ll ever work on is you",
+		"You can’t become who you want by staying who you are",
+		"The goal isn’t to be perfect, it’s to be better than yesterday",
+		"Never let fear decide your future",
+		"Your time is now",
+		"Keep showing up",
+		"You are closer than you think",
+		"Focus on what you can control and let go of what you can’t",
+		"Trust yourself, you’ve survived everything so far",
+		"The world needs your potential",
+		"There’s greatness inside you",
+		"Keep going, your future self is cheering for you"
+		];
+
+		const p = document.getElementById("quote");
+		p.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+		
+		function randomBrightColor() {
+		  let hue = Math.floor(Math.random() * 360);
+		  return `hsl(${hue}, 80%, 45%)`;
+		}
+
+		document.body.style.background = randomBrightColor();
+
+			
+		const fonts = [
+		  "font1","font2","font3","font4","font5",
+		  "font6","font7","font8","font9","font10"
+		];
+
+		const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+
+		p.classList.add(randomFont);
+	</script>
+
+	<a href="https://buymeacoffee.com/nathand159a"> support me! </a>
+	</body>
+</html>
